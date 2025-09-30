@@ -1,0 +1,26 @@
+<!-- love_card.html -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Love Card</title></head>
+<body style="font-family:sans-serif;text-align:center;padding:50px;background:#fff0f6">
+  <h2>Hey Mea — press the button 💌</h2>
+  <button id="btn">Open</button>
+  <p id="note" style="font-size:1.2rem;margin-top:20px"></p>
+<script>
+const notes = [
+ "You are my favorite person.",
+ "Every day with you is a gift.",
+ "I love how your laugh sounds.",
+ "I’m proud of the person you are.",
+ "Your smile is my favorite view.",
+ "I could listen to you talk all day."
+];
+
+const btn = document.getElementById('btn');
+btn.onclick = ()=> {
+  document.getElementById('note').innerText = notes[Math.floor(Math.random()*notes.length)];
+  btn.textContent = "Next"; // change the button label after first click
+}
+</script>
+</body>
+</html>
